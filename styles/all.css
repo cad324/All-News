@@ -1,0 +1,44 @@
+body {
+  font-family: Georgia, serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#query {
+  padding: 5px;
+  border: 1px solid #159563;
+  border-radius: 3px;
+}
+
+#news-query-submit {
+  padding: 6px;
+  border-radius: 2px;
+}
+
+#query:focus {
+  outline: none;
+}
+
+#headlines {
+  margin: auto;
+  width: 80%;
+}
+
+#headlines div {
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+}
+
+#headlines span h3 {
+  margin: 0 0 10px 0;
+  white-space: pre;
+}
+
+#headlines img {
+  width: 150px;
+  margin-right: 20px;
+}
