@@ -39,16 +39,27 @@ function changeQuery() {
 
 function displayHeadlines() {
   for (var index = 0; index < this.data.articles.length; ++index) {
-    var source = document.createElement("h3");
-    var headline = document.createElement("a");
-    var source_node = document.createTextNode(this.data.articles[index].source.name);
+    var headlines_container = document.getElementById("headlines");
+    var div_container = document.createElement("div");
+    var img_container = document.createElement("span");
+    var text_container = document.createElement("span");
+    var source = document.createElement("h3"); // Name of the source of the article
+    var headline = document.createElement("a"); //Title of the article
+    var thumbnail = document.createElement("img"); //Accompanying article photo
+    var source_node = document.createTextNode(this.data.articles[index]
+      .source.name);
     var headline_node = document.createTextNode(this.data.articles[index].title);
+    src = this.data.articles[index].urlToImage; //URL of article's main image
+    thumbnail.setAttribute('src', src);
     source.appendChild(source_node);
     headline.setAttribute('href', this.data.articles[index].url);
     headline.setAttribute('target', '_blank');
     headline.appendChild(headline_node);
-    var headlines_div = document.getElementById("headlines");
-    headlines_div.appendChild(source);
-    headlines_div.appendChild(headline);
+    img_container.appendChild(thumbnail);
+    text_container.appendChild(source);
+    text_container.appendChild(headline);
+    div_container.appendChild(img_container);
+    div_container.appendChild(text_container);
+    headlines_container.appendChild(div_container);
   }
 }
