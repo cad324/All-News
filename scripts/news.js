@@ -45,6 +45,7 @@ function displayHeadlines() {
     var headline_node = document.createTextNode(this.data.articles[index].title);
     source.appendChild(source_node);
     headline.setAttribute('href', this.data.articles[index].url);
+    headline.setAttribute('target', '_blank');
     headline.appendChild(headline_node);
     var headlines_div = document.getElementById("headlines");
     headlines_div.appendChild(source);
