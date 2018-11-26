@@ -42,3 +42,8 @@ h1 {
   width: 150px;
   margin-right: 20px;
 }
+
+#search-form {
+  width: 80%;
+  margin:auto;
+}
