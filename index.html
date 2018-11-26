@@ -10,9 +10,11 @@
 </head>
 <body>
   <h1>AllNews</h1>
-  <label for="query">News Topic: </label>
-  <input id="query" type="text" name="Query"/>
-  <input id="news-query-submit" type="submit" value="Search" name="Submit" onclick="changeQuery()"/>
+  <div id="search-form">
+    <label for="query">News Topic: </label>
+    <input id="query" type="text" name="Query"/>
+    <input id="news-query-submit" type="submit" value="Search" name="Submit" onclick="changeQuery()"/>
+  </div>
   <div id="headlines"></div>
 </body>
 </html>
