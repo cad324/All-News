@@ -63,3 +63,12 @@ function displayHeadlines() {
     headlines_container.appendChild(div_container);
   }
 }
+
+$(document).ready(function() {
+
+  $("#query").keypress(function(e) {
+    if (e.which == 13) {
+      changeQuery();
+    }
+  })
+});
